@@ -23,6 +23,7 @@ namespace Chat.Bot
             // подключаю метод Random
             Random random = new();
             var count = questions.Count;
+            var Score = 0;
             while (true)
             {
                 // эти 2 строчки изменят порядок строк на случайный
@@ -34,7 +35,8 @@ namespace Chat.Bot
                 
                 if (tryAnswer == question.Item2)
                 {
-                    Console.WriteLine("Правильно!");
+                    Score++;
+                    Console.WriteLine($"Правильно!  У Вас {Score} очков.");
                 }
                 else
                 {
